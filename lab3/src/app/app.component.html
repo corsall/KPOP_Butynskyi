@@ -1,0 +1,12 @@
+<h1>Enter image path</h1>
+
+<form [formGroup]="imageForm" (ngSubmit)="onSubmit()">
+
+    <input id="path" type="text" formControlName="path">
+    
+    <button class="button" type="submit">Search</button>
+</form>
+
+
+
+<img [src]= "imagePath"  >
