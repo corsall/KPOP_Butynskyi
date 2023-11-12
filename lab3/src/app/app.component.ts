@@ -17,7 +17,6 @@ export class AppComponent {
   constructor(private formBuilder: FormBuilder) {}
 
   onSubmit(): void {
-    // Process checkout data here
     this.imagePath = this.imageForm.value.path || '';
   }
 }

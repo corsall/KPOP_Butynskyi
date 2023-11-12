@@ -1,0 +1,12 @@
+<ul>
+  <h2>Favorites</h2>
+  <table>
+    <tr *ngFor="let user of favoriteUsers">
+      <td>{{ user.name.first }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.login.username }}</td>
+      <td>{{ user.login.password }}</td>
+      <td>{{ user.phone }}</td>
+    </tr>
+  </table>
+</ul>

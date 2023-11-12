@@ -104,18 +104,18 @@ favoriteLibrarian.assistCustomer("Bob");
 
 // class ReferenceItem {
 //     private _publisher: string = '';
-//     title: string = '';
-//     year: number = 0;
+//     // title: string = '';
+//     // year: number = 0;
 
-//     constructor(newTitle: string , newYear: number) {
-//         this.title = newTitle;
-//         this.year = newYear;
-//         console.log('Creating a new ReferenceItem...');
-//     }
-
-//     // constructor(public title: string, private year: number) {
+//     // constructor(newTitle: string , newYear: number) {
+//     //     this.title = newTitle;
+//     //     this.year = newYear;
 //     //     console.log('Creating a new ReferenceItem...');
 //     // }
+
+//     constructor(public title: string, private year: number) {
+//         console.log('Creating a new ReferenceItem...');
+//     }
 
 //     get publisher(): string {
 //         return this._publisher.toUpperCase();
@@ -137,7 +137,7 @@ favoriteLibrarian.assistCustomer("Bob");
 // const ref = new ReferenceItem('Steel', 2001);
 // ref.printItem();
 
-// // Завдання 2.6
+// Завдання 2.6
 // class Encyclopedia extends ReferenceItem {
 //     constructor(title: string, year: number, public edition: number) {
 //         super(title, year);

@@ -1,0 +1,32 @@
+<table>
+  <tr *ngFor="let user of users" (click)="showDetails(user)">
+    <td>{{ user.name.first }}</td>
+    <td>{{ user.email }}</td>
+    <td>{{ user.login.username }}</td>
+    <td>{{ user.login.password }}</td>
+    <td>{{ user.phone }}</td>
+    <td>
+      <button (click)="userSelected.emit(user); $event.stopPropagation()">
+        Add to Favorites
+      </button>
+    </td>
+  </tr>
+</table>
+
+<!-- Popup -->
+<div *ngIf="selectedUser" class="popup">
+  <div class="popup-content">
+    <span class="close" (click)="closePopup()">&times;</span>
+
+    <div *ngFor="let entry of selectedUser | keyvalue">
+      <strong>{{ entry.key }}:</strong> {{ entry.value | json }}<br />
+    </div>
+  </div>
+</div>
+
+<!-- <strong>Name:</strong> {{ selectedUser.name.first }}
+      {{ selectedUser.name.last }}<br />
+      <strong>Email:</strong> {{ selectedUser.email }}<br />
+      <strong>Login:</strong> {{ selectedUser.login.username }}<br />
+      <strong>Password:</strong> {{ selectedUser.login.password }}<br />
+      <strong>Phone:</strong> {{ selectedUser.phone }}<br /> -->

@@ -1,0 +1,5 @@
+<div>
+    <label>Введіть масив чисел:</label>
+    <input [(ngModel)]="numberArray" placeholder="Введіть массив через кому" />
+</div>
+<app-child-component [numbers]="numberArray"></app-child-component>
