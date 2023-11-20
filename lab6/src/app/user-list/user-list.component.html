@@ -6,7 +6,7 @@
     <td>{{ user.login.password }}</td>
     <td>{{ user.phone }}</td>
     <td>
-      <button (click)="userSelected.emit(user); $event.stopPropagation()">
+      <button (click)="addToFavorites(user); userSelected.emit(user); $event.stopPropagation()">
         Add to Favorites
       </button>
     </td>
